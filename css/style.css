@@ -1,0 +1,34 @@
+*{
+    outline: none !important;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+input:focus,
+select:focus {
+    box-shadow: none;
+}
+.logo img {
+    width: 100px;
+}
+.navbar-nav .nav-item {
+    margin: auto 2rem;
+}
+.navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+}
+
+.container {
+    max-width: 1200px;
+}
+.topbar .search-group {
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid #333;
+}
+.topbar .search-group input {
+    -moz-border-radius-topleft: 25px;
+    -moz-border-radius-bottomleft: 25px;
+}
