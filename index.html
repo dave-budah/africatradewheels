@@ -5,39 +5,58 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
 
-    <!--  Fontawesome  -->
+<!--    Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<!--    owlCarousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+<!--  Fontawesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+<!--    Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<div>
-    <div class="container mb-0 pb-0">
-        <div class="d-flex justify-content-evenly topbar py-3 mb-0">
-            <a href="#" class="logo">
-                <img src="assets/logos/logo.png" alt="logo">
+<div class="topbar-container fixed-top">
+    <div class="container mb-0 pt-1" id="topbar">
+        <div class="d-flex justify-content-evenly topbar py-1 mb-0">
+            <a href="#" class="d-none d-sm-none d-md-block topbar-time">
+               <i class="fa fa-clock"></i>
+                Mon - Fri : 0800 to 1600
             </a>
 
-            <div class="input-group mb-3 search-group">
+            <div class="input-group mb-1 search-group">
                 <input type="text" class="form-control bg-transparent" placeholder="Search..." aria-label="search field" aria-describedby="basic-search">
                 <span class="input-group-text" id="basic-search"><i class="fa fa-search"></i></span>
             </div>
 
-            <a href="#">
+            <a href="#" class="d-none d-sm-none d-md-block topbar-phone-link">
                 <i class="fa fa-phone"></i>
                 +263 77 000 000
             </a>
         </div>
     </div>
 
-    <div class="bg-dark mt-0">
+    <div class="bg-light mt-0">
     <div class="container py-0">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <img src="assets/logos/logo.png" alt="logo">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Wheels</a>
                         </li>
@@ -48,17 +67,18 @@
                             <a class="nav-link" href="#">Accessories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                            <a class="nav-link" href="#" tabindex="-1">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a>
+                            <a class="nav-link" href="#" tabindex="-1">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Register</a>
+                            <a class="nav-link" href="#" tabindex="-1">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" title="Shopping cart">
+                            <a class="nav-link" href="#" tabindex="-1" title="Shopping cart" id="shopping-cart">
                                 <i class="fa fa-shopping-cart tex-white"></i>
+                                <span class="counter-display">999</span>
                             </a>
                         </li>
                     </ul>
@@ -68,6 +88,101 @@
     </div>
     </div>
 </div>
+<!-- Hero Slider -->
+<header>
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="assets/images/hero-c.jpg" alt="images not found">
+            <div class="cover">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="line"></div>
+                        <h2>Get your money's worth</h2>
+                        <h1>All weather tyres</h1>
+                        <h4>No matter which climate condition, our tyres can handle.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="assets/images/hero-a.jpg" alt="Car wheel">
+            <div class="cover">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="line animated bounceInLeft"></div>
+                        <h2>A wide range of dealers</h2>
+                        <h1>Reputable partners</h1>
+                        <h4>We have partnered with companies from across the globe.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="assets/images/hero-b.jpg" alt="images not found">
+            <div class="cover">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="line animated bounceInLeft"></div>
+                        <h2>Wheel fitting and repairs</h2>
+                        <h1>Variety of Accessories</h1>
+                        <h4>For all spare parts and tools, we are your one-stop shop.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Hero Slider -->
+
+<!-- Deals -->
+<section id="featured-deals" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card box py-5 px-2 text-start" id="box-a">
+                                <div class="text-start my-3">
+                                  <i class="fa-solid fa-handshake fa-2x"></i>
+                                </div>
+                                <div class="text-start my-1">
+                                    <h4>Largest dealership of wheels</h4>
+                                </div>
+                                <p>Motor Trade Africa offers the biggest wheel deal in Zimbabwe. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card box py-5 px-3 text-start" id="box-b">
+                                <div class="text-start my-3">
+                                    <i class="fa-solid fa-dollar-sign fa-2x"></i>
+                                </div>
+                                <div class="text-start my-1">
+                                    <h4>Most affordable prices</h4>
+                                </div>
+                                <p>Our prices are very affordable Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card box py-5 px-3 text-start" id="box-c">
+                                <div class="text-start my-3">
+                                    <i class="fa-solid fa-location-dot fa-2x"></i>
+                                </div>
+                                <div class="text-start my-1">
+                                    <h4>Close to your location</h4>
+                                </div>
+                                <p>Motor Trade Africa has registered dealers in all major towns and cities and selected growth points.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Deals -->
+
+<script src="js/custom.js"></script>
 
 </body>
 </html>

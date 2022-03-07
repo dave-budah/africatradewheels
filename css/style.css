@@ -1,6 +1,17 @@
 *{
     outline: none !important;
 }
+:root {
+    --company-red-color: hsl(354, 76%, 50%);
+    --company-yellow-color: hsl(47, 95%, 70%);
+    --company-green-color: hsl(148, 81%, 27%);
+    --defaut-text-color: #202020;
+    --lite-text-color: #484848;
+}
+html {
+    font-family: 'Lato', sans-serif;
+}
+/***** Re-usable Styles ****/
 a{
     text-decoration: none;
     color: inherit;
@@ -9,26 +20,272 @@ input:focus,
 select:focus {
     box-shadow: none;
 }
-.logo img {
-    width: 100px;
-}
-.navbar-nav .nav-item {
-    margin: auto 2rem;
-}
-.navbar-nav .nav-item .nav-link {
-    color: #fff !important;
-}
 
 .container {
     max-width: 1200px;
+}
+/***** End Re-usable Styles ****/
+
+.topbar-container {
+    background: var(--company-red-color);
+    transition: .3s;
+}
+.topbar {
+    color: #fff;
+}
+.topbar a:hover {
+    color: var(--defaut-text-color);
 }
 .topbar .search-group {
     max-width: 400px;
     overflow: hidden;
     border-radius: 25px;
-    border: 1px solid #333;
+    border: 1px solid #fff;
 }
 .topbar .search-group input {
     -moz-border-radius-topleft: 25px;
     -moz-border-radius-bottomleft: 25px;
+    color: #fff;
+    border: none !important;
+}
+.topbar .search-group input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+.topbar .search-group input::placeholder {
+    color: #fff;
+}
+.hide-topbar {
+    display: none;
+}
+/******* Navbar *******/
+.logo img {
+    width: 120px;
+}
+.navbar-nav .nav-item {
+    margin: auto 2rem;
+}
+.navbar-nav .nav-item .nav-link {
+    color: var(--defaut-text-color);
+    text-transform: uppercase;
+    font-size: .8rem;
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.navbar-nav .nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--company-red-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+#shopping-cart {
+    position: relative;
+}
+#shopping-cart .fa-shopping-cart {
+    font-size: 20px;
+}
+#shopping-cart span.counter-display {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--company-red-color);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: -.5rem;
+    font-size: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/******* End Navbar *******/
+
+/******* Hero CSS *******/
+header .item {
+    height: 100vh;
+    position: relative;
+    margin-top: 8rem;
+}
+header .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header .item .cover {
+    padding: 75px 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+}
+header .item .cover .header-content {
+    position: relative;
+    padding: 56px;
+    overflow: hidden;
+}
+header .item .cover .header-content .line {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border: 9px solid var(--company-red-color);
+    -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+    clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+header .item .cover .header-content h2 {
+    font-weight: 300;
+    font-size: 35px;
+    color: #fff;
+}
+header .item .cover .header-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin: 5px 0 20px;
+    word-spacing: 3px;
+    color: #fff;
+}
+header .item .cover .header-content h4 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    color: #fff;
+}
+header .owl-item.active h1 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+    animation-delay: 0.3s;
+}
+header .owl-item.active h2 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+    animation-delay: 0.3s;
+}
+header .owl-item.active h4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    animation-delay: 0.3s;
+}
+header .owl-item.active .line {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: fadeInLeft;
+    animation-delay: 0.3s;
+}
+header .owl-nav .owl-prev {
+    position: absolute;
+    left: 15px;
+    top: 43%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background: rgba(0, 0, 0, 0.5) !important;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    display: block;
+    z-index: 1000;
+    border-radius: 0;
+}
+header .owl-nav .owl-prev span {
+    font-size: 1.6875rem;
+    color: #fff;
+}
+header .owl-nav .owl-prev:focus {
+    outline: 0;
+}
+header .owl-nav .owl-prev:hover {
+    background: #000 !important;
+}
+header .owl-nav .owl-next {
+    position: absolute;
+    right: 15px;
+    top: 43%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background: rgba(0, 0, 0, 0.5) !important;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    display: block;
+    z-index: 1000;
+    border-radius: 0;
+}
+header .owl-nav .owl-next span {
+    font-size: 1.6875rem;
+    color: #fff;
+}
+header .owl-nav .owl-next:focus {
+    outline: 0;
+}
+header .owl-nav .owl-next:hover {
+    background: #000 !important;
+}
+header:hover .owl-prev {
+    left: 0px;
+    opacity: 1;
+}
+header:hover .owl-next {
+    right: 0px;
+    opacity: 1;
+}
+/******* Hero CSS *******/
+
+/**** Featured Deals ****/
+#featured-deals .box {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#featured-deals .box h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#featured-deals .box h4,
+#featured-deals .box p {
+    color: var(--defaut-text-color);
+}
+
+/**** End Featured Deals ****/
+
+
+
+
+
+/**** Media Queries ****/
+@media (max-width: 768px) {
+
 }
