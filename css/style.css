@@ -269,6 +269,7 @@ header:hover .owl-next {
     height: 300px;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 2rem;
 }
 
 #featured-deals .box h4 {
