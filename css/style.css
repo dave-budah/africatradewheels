@@ -54,6 +54,7 @@ select:focus {
 }
 .topbar .search-group input::placeholder {
     color: #fff;
+    opacity: .5;
 }
 .hide-topbar {
     display: none;
@@ -280,12 +281,149 @@ header:hover .owl-next {
 }
 
 /**** End Featured Deals ****/
+.search-col {
+    background: #ddd;
+    padding-bottom: 4rem;
+}
+.search-block {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/**** Search Field Default *****/
+.product-search {
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid var(--defaut-text-color);
+}
+.product-search input {
+    -moz-border-radius-topleft: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    color: var(--defaut-text-color);
+    border: none !important;
+}
+.product-search input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+.product-search input::placeholder {
+    color: var(--defaut-text-color);
+    font-size: .8rem;
+    opacity: .5;
+}
+.product-search span {
+    background: #fff;
+    border: none;
+}
+.tyre-size h4, .wheel-size h4, .vehicle h4  {
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/**** Search Field Default *****/
 
 
+/**** Sort *****/
+#sort {
+    max-width: 300px;
+    border-radius: unset;
+    background: transparent;
+}
+#sort option {
+    font-size: .8rem;
 
+}
+#sort:focus {
+    box-shadow: none !important;
+    border: 1px solid var(--company-yellow-color);
+}
+.default-h-four {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+}
+/**** End Sort *****/
 
-
+/**** Product  card ****/
+.tyre-card {
+    width: 100%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.tyre-card img {
+    width: 100%;
+    height: 100%;
+}
+.new {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 80px;
+    background: var(--company-red-color);
+    color: #fff;
+    padding: .3rem 0 .3rem .3rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 75% 100%, 0% 100%);
+}
+.product-detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .8);
+}
+.product-detail h5 {
+    font-weight: 700;
+    font-size: .8rem;
+}
+.product-detail .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--company-red-color);
+}
+span.page {
+    border: 1px solid var(--defaut-text-color);
+    height: 40px;
+    width: 40px;
+    margin: .2rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: .4rem .8rem;
+    background: var(--company-red-color);
+    color: #fff;
+    transition: .3s;
+}
+span.page:hover {
+    color: var(--company-red-color);
+    background: #fff;
+}
+button.page {
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid var(--defaut-text-color);
+    height: 40px;
+    width: 40px;
+    margin: .2rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: .4rem .8rem;
+    background: var(--company-red-color);
+    color: #fff;
+    transition: .3s;
+}
 /**** Media Queries ****/
+
+/**** Spares Section ****/
+#spares .default-h-four::after {
+    content: "";
+    height: 2px;
+    width: 20%;
+    background: var(--company-red-color);
+}
+
 @media (max-width: 768px) {
 
 }
